@@ -8,10 +8,10 @@ public class ImageProcessModule {
 
     private String TAG = "ImageProcessModule";
 
-    private static final ImageProcessModule imageProcessModule = new ImageProcessModule();;
+    private static final ImageProcessModule imageProcessModule = new ImageProcessModule();
 
-    public static int FLIP_VERTICAL = 1;
-    public static int FLIP_HORIZONTAL = 2;
+    private int FLIP_VERTICAL = 1;
+    private int FLIP_HORIZONTAL = 2;
 
     private ImageProcessModule() {
 
@@ -21,7 +21,17 @@ public class ImageProcessModule {
         return imageProcessModule;
     }
 
-    public static int[] getPixels(Bitmap bmOriginal) {
+
+    public int getFlipVertical(){
+        return FLIP_VERTICAL;
+    }
+
+
+    public int getFlipHorizontal(){
+        return FLIP_HORIZONTAL;
+    }
+
+    public int[] getPixels(Bitmap bmOriginal) {
 
         int width = bmOriginal.getWidth();
         int height = bmOriginal.getHeight();
@@ -34,7 +44,7 @@ public class ImageProcessModule {
     }
 
 
-    public static Bitmap flipImage(Bitmap src, int isFlipVerticalOrHorizontal) {
+    public Bitmap flipImage(Bitmap src, int isFlipVerticalOrHorizontal) {
 
         // create new matrix for transformation
         Matrix matrix = new Matrix();
