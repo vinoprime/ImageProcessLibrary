@@ -8,17 +8,23 @@ public class ImageProcessModule {
 
     private String TAG = "ImageProcessModule";
 
-    private static final ImageProcessModule imageProcessModule = new ImageProcessModule();
-
     private int FLIP_VERTICAL = 1;
     private int FLIP_HORIZONTAL = 2;
 
-    private ImageProcessModule() {
+//    private static final ImageProcessModule imageProcessModule = new ImageProcessModule();
 
-    }
 
-    public static ImageProcessModule getInstance() {
-        return imageProcessModule;
+
+//    private ImageProcessModule() {
+//
+//    }
+
+//    public static ImageProcessModule getInstance() {
+//        return imageProcessModule;
+//    }
+
+    public ImageProcessModule(){
+
     }
 
 
